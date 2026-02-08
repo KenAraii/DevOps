@@ -1,0 +1,19 @@
+name: CI - Build Container Image
+
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build container image
+        run: |
+          cd container-demo
+          docker build -t devops-demo:ci .
+
