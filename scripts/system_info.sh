@@ -6,4 +6,4 @@ echo "Uptime:"
 uptime
 echo "Disk Usage:"
 df -h
-
+echo "Checked at:$(date)"
