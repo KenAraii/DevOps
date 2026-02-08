@@ -15,9 +15,6 @@ jobs:
       - name: Build container image
         run: |
           cd container-demo
-          docker build -t devops-demo:ci .
-
-      - name: Build container image
-        run: |
-          cd container-demo
           docker build -f Containerfile -t devops-demo:ci .
+
+
