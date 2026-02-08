@@ -1,0 +1,7 @@
+FROM registry.access.redhat.com/ubi9/ubi
+WORKDIR /app
+COPY app.sh .
+RUN chmod +x app.sh
+CMD ["./app.sh"]
+
+
